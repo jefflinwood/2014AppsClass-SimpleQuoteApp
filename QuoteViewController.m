@@ -10,6 +10,15 @@
 
 @interface QuoteViewController ()
 
+@property (strong, nonatomic) NSArray *quotes;
+@property (assign, nonatomic) int currentIndex;
+
+@property (weak, nonatomic) IBOutlet UILabel *quoteLabel;
+@property (weak, nonatomic) IBOutlet UIButton *previousQuoteButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextQuoteButton;
+- (IBAction)previousQuote:(id)sender;
+- (IBAction)nextQuote:(id)sender;
+
 @end
 
 @implementation QuoteViewController
@@ -27,6 +36,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.currentIndex = 0;
+    self.quotes = @[@"Quote 1 - author 1",@"Quote 2 - author 2", @"Quote 3 - author 3"];
+    [self updateUI];
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,4 +60,34 @@
 }
 */
 
+- (void) updateUI {
+    self.quoteLabel.text = self.quotes[self.currentIndex];
+    if (self.currentIndex == 0) {
+        self.previousQuoteButton.enabled = NO;
+    } else {
+        self.previousQuoteButton.enabled = YES;
+    }
+    if (self.currentIndex == [self.quotes count] - 1) {
+        self.nextQuoteButton.enabled = NO;
+    } else {
+        self.nextQuoteButton.enabled = YES;
+    }
+}
+
+- (IBAction)previousQuote:(id)sender {
+    if (self.currentIndex <=0) {
+        return;
+    }
+    self.currentIndex = self.currentIndex - 1;
+    [self updateUI];
+    
+}
+
+- (IBAction)nextQuote:(id)sender {
+    if (self.currentIndex >= [self.quotes count] - 1) {
+        return;
+    }
+    self.currentIndex = self.currentIndex + 1;
+    [self updateUI];
+}
 @end
