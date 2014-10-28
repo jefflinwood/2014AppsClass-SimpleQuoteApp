@@ -21,6 +21,7 @@
 		28E25EDF19F99F26000523C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E25EC119F99F26000523C2 /* UIKit.framework */; };
 		28E25EE719F99F26000523C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28E25EE519F99F26000523C2 /* InfoPlist.strings */; };
 		28E25EE919F99F26000523C2 /* SimpleQuoteAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E25EE819F99F26000523C2 /* SimpleQuoteAppTests.m */; };
+		28E25EF419F99F34000523C2 /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E25EF319F99F34000523C2 /* QuoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		28E25EE419F99F26000523C2 /* SimpleQuoteAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleQuoteAppTests-Info.plist"; sourceTree = "<group>"; };
 		28E25EE619F99F26000523C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		28E25EE819F99F26000523C2 /* SimpleQuoteAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleQuoteAppTests.m; sourceTree = "<group>"; };
+		28E25EF219F99F34000523C2 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
+		28E25EF319F99F34000523C2 /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 		28E25EB119F99F26000523C2 = {
 			isa = PBXGroup;
 			children = (
+				28E25EF219F99F34000523C2 /* QuoteViewController.h */,
+				28E25EF319F99F34000523C2 /* QuoteViewController.m */,
 				28E25EC319F99F26000523C2 /* SimpleQuoteApp */,
 				28E25EE219F99F26000523C2 /* SimpleQuoteAppTests */,
 				28E25EBC19F99F26000523C2 /* Frameworks */,
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28E25ED419F99F26000523C2 /* ViewController.m in Sources */,
+				28E25EF419F99F34000523C2 /* QuoteViewController.m in Sources */,
 				28E25ECE19F99F26000523C2 /* AppDelegate.m in Sources */,
 				28E25ECA19F99F26000523C2 /* main.m in Sources */,
 			);
